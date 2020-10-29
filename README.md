@@ -1,4 +1,7 @@
 # Dreaming to Distill: Data free Knowledge Transfer via DeepInversion Tensorflow Keras
+
+![2](./assets/fig1.gif)
+
 ## Requirements
 
 - Tensorflow 2.3.0 
@@ -36,7 +39,7 @@ Arguments:
 - `random_label` - Generate random label??
 - `save_path` - Saved directory path
 
-![2](./assets/fig1.png)
+
 
 ![2](./assets/fig2.png)
 
