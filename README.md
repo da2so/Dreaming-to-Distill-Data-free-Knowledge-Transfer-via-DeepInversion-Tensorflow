@@ -1,5 +1,4 @@
-# Dreaming to Distill: Data free Knowledge Transfer via DeepInversion Pytorch
-
+# Dreaming to Distill: Data free Knowledge Transfer via DeepInversion Tensorflow Keras
 ## Requirements
 
 - Tensorflow 2.3.0 
@@ -20,7 +19,6 @@ Arguments:
 
 - `dataset` - Select a dataset ['imagenet']
 	- I will update some codes for cifar10 and cifar100 datasets.
-}
 - `t_model_path` - teacher model path
 	- Available list of teacher models: ['resnet50v2', 'mobilenet', 'mobilenetv2', 'vgg19']
 - `adi_coeff` - Coefficient for Adaptive Deep Inversion
