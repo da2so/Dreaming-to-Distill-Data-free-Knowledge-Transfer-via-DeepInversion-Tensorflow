@@ -1,6 +1,8 @@
 # Dreaming to Distill: Data free Knowledge Transfer via DeepInversion Tensorflow Keras
 
-<img src="./assets/fig1.gif" alt="drawing2" width="500"/>
+<p align="center">
+	<img src="./assets/fig1.gif" alt="drawing2" width="500"/>
+</p>
 
 ## Requirements
 
