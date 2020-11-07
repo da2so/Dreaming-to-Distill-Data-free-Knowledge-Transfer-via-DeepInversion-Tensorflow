@@ -63,7 +63,7 @@ Generate DeepInversion from teacher network (suppose you select teacher as resne
 CUDA_VISIBLE_DEVICES=0 python gen_DI.py --dataset=cifar10 --t_model_path=saved_models/cifar10_resnet34.h5 --adi_coeff=0.0 --bs=256 --r_feature=0.02 --jitter=2  --epochs=150
 ```
 <p align="center">
-	<img src="./assets/fig3.png" alt="cifa10_resenet34" width="800"/>
+	<img src="./assets/fig3.png" alt="cifa10_resenet34" width="500"/>
 </p>
 
 
