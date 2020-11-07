@@ -76,6 +76,8 @@ CUDA_VISIBLE_DEVICES=0 python train_student.py --dataset=cifar10 --teacher_path=
 Then, you can get stduent network in **saved_models** folder.
 
 
+![2](./assets/fig4.png)
+
 ## Understanding this paper
 
 Check my blog!!
