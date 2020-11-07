@@ -1,6 +1,7 @@
 
 import argparse
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 import tensorflow as tf
 from DeepInversion import Deep_Inversion
@@ -32,13 +33,14 @@ def main():
     parser.add_argument('--main_mul', type=float, default=1.0, help='coefficient for the main loss in optimization')
     parser.add_argument('--random_label', type=str2bool, default='True', help='generate random label??')
     parser.add_argument('--save_path', type=str, default='./results', help='saved directory path')
+    parser.add_argument('--epochs', type=int, default=1, help='epoch')
 
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['TF2_BEHAVIOR'] = '1'
-    os.environ['CUDA_VISIBLE_DEVICES']= '3'
+    os.environ['CUDA_VISIBLE_DEVICES']= '0'
 
     config = tf.compat.v1.ConfigProto()
-    config.gpu_options.per_process_gpu_memory_fraction = 0.8
+    config.gpu_options.per_process_gpu_memory_fraction = 0.9
     tf.compat.v1.keras.backend.set_session(tf.compat.v1.Session(config=config))
     
     args = parser.parse_args()
@@ -58,7 +60,8 @@ def main():
                         bs=args.bs,
                         jitter=args.jitter,
                         save_path=args.save_path,
-                        random_label=args.random_label
+                        random_label=args.random_label,
+                        epochs= args.epochs
                         )
     DI_obj.build()
 
