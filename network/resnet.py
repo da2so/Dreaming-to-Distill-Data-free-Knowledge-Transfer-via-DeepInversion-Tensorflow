@@ -71,7 +71,6 @@ def bottleneck(filters, init_strides=1, is_first_block_of_first_layer=False):
         out = Conv2D(filters=filters, kernel_size=1, strides=1,padding="same", kernel_initializer='he_normal',kernel_regularizer=l2(1e-4))(input)
         out = _bn_relu(out)
 
-        out = ZeroPadding2D(padding=1)(out)
         out = Conv2D(filters=filters, kernel_size=3, strides=init_strides,padding="same", kernel_initializer='he_normal',kernel_regularizer=l2(1e-4))(out)
         out = _bn_relu(out)
 
